@@ -1,0 +1,18 @@
+.cache
+*__pychache__
+*.py[co]
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+
+# Installer logs
+pip-log.txt
+#develpomnet projects
+.ropeproject
+# link to python virtualenv
+.pyenv*
+venv

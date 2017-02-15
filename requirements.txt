@@ -1,0 +1,3 @@
+arrow
+numpy
+git+https://github.com/robert-zaremba/py-common.git
