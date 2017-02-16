@@ -47,6 +47,9 @@ class Trade:
     def __init__(self, timestamp, volume, typ, price):
         self.typ = self.mapper[typ.lower()]
 
+    def __repr__(self):
+        return "Trade<%s %s %s %s>" % (self.timestamp, self.volume, self.typ,
+                                       self.price)
 
 class DB:
     def __init__(self, filename):
@@ -85,5 +88,6 @@ class DB:
         return s
 
     def add_trade(self, stock, timestamp, volume, typ, price):
-        self.trades[stock.upper()].append(
-            Trade(timestamp, volume, typ, price))
+        t = Trade(timestamp, volume, typ, price)
+        self.trades[stock.upper()].append(t)
+        return t

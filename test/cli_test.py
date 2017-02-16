@@ -51,6 +51,12 @@ def test_run_record_trade():
     assert trades[0].price == 20
 
 
+def test_empty_gmean():
+    cli = mk_cli()
+    assert cli.run_gmean() == 0
+    assert cli.run_r_gmean() == 0
+
+
 def test_run_record_trade_and_ops():
     cli = mk_cli()
     step = timedelta(minutes=1)

@@ -56,8 +56,8 @@ Adds trade to the database. Timestamp can't contain space, though most\
 widely formats are supported (eg yyyy-mm-ddThh:mm). \
 Type is one of 'b' or 's'.'''
         try:
-            self.run_record_trade(line)
-            print("trade added")
+            t = self.run_record_trade(line)
+            print("trade added", t)
         except Exception as e:
             print("""Wrong request. Expected arguments:
   stock_symbol: string,
@@ -106,6 +106,9 @@ stored in the program'''
         '''quit the program'''
         print("Good bye")
         return True
+
+    def do_EOF(self, line):
+        return self.do_quit(line)
 
 
 def main(db_filename):

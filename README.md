@@ -5,6 +5,8 @@ This repository contains two tools:
 
 # Requirements
 
+Python3 >= 3.4 is required.
+
 All dependencies to run the applications are specified in the `requirements.txt` file. Dev dependencies (to run tests) are in `requirements-dev.txt`
 
 ## Dependencies installation
